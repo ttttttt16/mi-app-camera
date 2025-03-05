@@ -1,0 +1,12 @@
+:root {
+    --background-color: #fef6f8;
+    --primary-color: #f8c1cc;
+    --secondary-color: #e8a8b8;
+    --lens-color: #ffdce5;
+    --button-color: #ff99ac;
+    --hover-color: #ff8299;
+    --text-color: #ffffff;
+    --no-image-text: #8b5a66;
+    --success-text: #ff3366;
+    --error-text: #ff758f;
+}

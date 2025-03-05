@@ -1,0 +1,81 @@
+/* Paleta de colores rosados */
+:root {
+    --primary-color: #ff7eb9;
+    /* Rosa principal */
+    --secondary-color: #ffafcc;
+    /* Rosa claro */
+    --background-color: #fff0f6;
+    /* Fondo rosado muy claro */
+    --text-color: #6d213c;
+    /* Texto oscuro para contraste */
+    --hover-color: #ff5c8a;
+    /* Rosa más intenso para hover */
+}
+
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-3px);
+}
+
+/* Iconos */
+.icon-camera,
+.icon-gallery {
+    font-family: 'Material Icons';
+    font-size: 24px;
+    margin-right: 8px;
+}
+
+.icon-camera::before {
+    content: "photo_camera";
+    /* Icono de cámara */
+}
+
+.icon-gallery::before {
+    content: "collections";
+    /* Icono de galería */
+}
+
+/* Animación suave al hacer hover */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.nav-link:hover i {
+    animation: bounce 0.5s;
+}

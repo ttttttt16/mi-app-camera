@@ -1,0 +1,32 @@
+<div class="camera-container">
+    <div class="camera-body">
+        <div class="camera-lens">
+            <!-- Mostrar imagen si existe, sino el placeholder -->
+            <div class="placeholder">
+                <i class="icon-camera"></i>
+                <span class="placeholder-text">{{ captureMessage }}</span>
+            </div>
+        </div>
+
+        <button (click)="takePicture()" class="take-picture-button" [disabled]="loading">
+            <i class="icon-camera"></i>
+            <span class="button-text">{{ loading ? 'Capturando...' : 'Tomar Foto' }}</span>
+            <span class="loading-spinner" *ngIf="loading"></span>
+        </button>
+
+        <div class="camera-flash" *ngIf="flashActive">
+            <span class="flash-effect"><i class="icon-flash"></i></span>
+        </div>
+
+        <div class="camera-top">
+            <div class="viewfinder"><span class="viewfinder-icon"><i class="icon-viewfinder"></i></span></div>
+        </div>
+
+        <div class="camera-grip"></div>
+    </div>
+
+    <div class="error-message" *ngIf="errorMessage">
+        <i class="icon-error"></i>
+        <span class="error-text">{{ errorMessage }}</span>
+    </div>
+</div>

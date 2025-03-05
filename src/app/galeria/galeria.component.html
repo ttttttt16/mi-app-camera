@@ -1,0 +1,19 @@
+<div class="galeria-container">
+    <h1>Galería de Imágenes</h1>
+
+    <!-- Mensaje si no hay imágenes -->
+    <div class="no-images-message" *ngIf="images.length === 0">
+        <i class="icon-gallery"></i>
+        <span>No hay imágenes en la galería.</span>
+    </div>
+
+    <!-- Lista de imágenes con botón de eliminar -->
+    <div class="image-grid" *ngIf="images.length > 0">
+        <div class="image-item" *ngFor="let image of images">
+            <img [src]="image" alt="Imagen capturada" class="gallery-image">
+            <button class="delete-button" (click)="deleteImage(image)">
+                <i class="icon-delete"></i>
+            </button>
+        </div>
+    </div>
+</div>
